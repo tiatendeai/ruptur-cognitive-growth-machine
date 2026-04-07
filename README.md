@@ -1,20 +1,14 @@
-Microservice Cognitive Growth Machine | Antigravity / Firecrow / Supabase / BetBoom-Bac-Bo-rules-and-information
-
-# BetBoom-Bac-Bo-rules-and-information
-BetBoom Bac Bo rules and information
-
-
 # 🧠 Microservice Cognitive Growth Machine
 
 **Bet A.I. — 2DL Company**
 
-Repository: `tiatendeai/ruptur-cognitive-growth-machine`
+Repositório: `tiatendeai/ruptur-cognitive-growth-machine`
 
 ---
 
 ## 🚀 Visão
 
-Este projeto implementa o **Microservice Cognitive Growth Machine**, a camada responsável por:
+Este projeto implementa o **Microservice Cognitive Growth Machine**, responsável por:
 
 * observabilidade
 * telemetria
@@ -31,7 +25,7 @@ Este projeto implementa o **Microservice Cognitive Growth Machine**, a camada re
 
 ## 🎯 Propósito
 
-Este microserviço NÃO é o robô.
+Este microserviço **NÃO é o robô**.
 
 Ele existe para:
 
@@ -41,15 +35,15 @@ Ele existe para:
 * medir assertividade de hipóteses
 * manter rastreabilidade completa
 * alimentar backend, robô, suporte e analytics
-* permitir evolução contínua do sistema
+* permitir evolução contínua
 
 ---
 
-## 🧠 Contexto do Projeto
+## 🧠 Contexto
 
 * Empresa: **2DL Company**
 * Plataforma: **Bet A.I.**
-* Caso inicial: **will-dados-pro**
+* Caso: **will-dados-pro**
 * Domínio: **Bac Bo**
 * Plataforma alvo: **BetBoom**
 
@@ -57,37 +51,35 @@ Ele existe para:
 
 ## 🧱 O que este serviço faz
 
-* discovery contínuo da plataforma
+* discovery contínuo
 * engenharia reversa de UI/UX
 * análise de websocket e rede
 * versionamento de contratos
 * modelagem de state machine
-* detecção de drift (UI, rede, regras)
+* detecção de drift
 * análise de hipóteses (sem apostar)
 * geração de métricas e alertas
-* suporte e sustentação
-* agentic RAG (memória do sistema)
+* sustentação e suporte
+* agentic RAG
 
 ---
 
-## 🚫 O que este serviço NÃO faz
+## 🚫 O que NÃO faz
 
-* não executa apostas
-* não clica na plataforma
-* não contém lógica do robô executor
+* não aposta
+* não executa robô
+* não clica
 * não mistura execução com inteligência
 
 ---
 
-## 🔁 Execução Automática
-
-O serviço roda continuamente com rotinas:
+## 🔁 Execução automática
 
 ### Curto prazo
 
 * health check websocket
-* validação de seletores críticos
-* verificação de estado da rodada
+* validação de seletores
+* validação de estado
 
 ### Médio prazo
 
@@ -103,9 +95,9 @@ O serviço roda continuamente com rotinas:
 
 ---
 
-## 🧾 Rastreabilidade (Core do sistema)
+## 🧾 Rastreabilidade
 
-Tudo deve ser registrado:
+Tudo é registrado:
 
 * tasks
 * missões
@@ -120,22 +112,23 @@ Tudo deve ser registrado:
 
 ---
 
-## 🧠 Como usar (Agente)
+## 🤖 Iniciar agente (IMPORTANTE)
 
-Este projeto é operado por agentes (Antigravity / Firecrow / Codex).
+Use este prompt:
 
-### Prompt inicial
-
-Use este prompt para iniciar:
-
-```
+```id="agent_start"
 Você é o agente líder do repositório tiatendeai/ruptur-cognitive-growth-machine.
 
-Comunique-se sempre em PT-BR.
+Responda sempre em PT-BR.
 
 Seu papel NÃO é construir o robô de apostas.
 
-Seu papel é estruturar o microserviço de observabilidade, telemetria, anticrise, sustentação e aprendizado contínuo.
+Seu papel é estruturar o microserviço de:
+- observabilidade
+- telemetria
+- anticrise
+- sustentação
+- aprendizado contínuo
 
 Antes de qualquer coisa:
 1. leia o repositório
@@ -148,52 +141,37 @@ Depois entregue:
 - análise do repo
 - arquitetura
 - bounded contexts
-- modelo de rastreabilidade
+- rastreabilidade
 - rotinas automáticas
 - interfaces de consumo
-- backlog inicial
-- riscos e desconhecidos
+- backlog
+- riscos
+- unknown unknowns
 ```
 
 ---
 
-## 🧩 Arquitetura (visão inicial)
+## 🧩 Arquitetura inicial
 
-Módulos principais:
-
-* `platform-discovery`
-* `ui-map-auditor`
-* `network-contract-auditor`
-* `state-machine-observer`
-* `hypothesis-intelligence`
-* `drift-detector`
-* `health-score-engine`
-* `incident-intelligence`
-* `knowledge-ingestor`
-* `consumer-api`
+* platform-discovery
+* ui-map-auditor
+* network-contract-auditor
+* state-machine-observer
+* hypothesis-intelligence
+* drift-detector
+* health-score-engine
+* incident-intelligence
+* knowledge-ingestor
+* consumer-api
 
 ---
 
-## 🔗 Integração
-
-Este serviço alimenta:
-
-* robô executor
-* backend principal
-* analytics
-* suporte
-* sustentação
-* pipelines de melhoria contínua
-
----
-
-## ⚠️ Princípio mais importante
+## ⚠️ Princípio central
 
 > Este sistema existe para lidar com o que muda sem aviso.
 
-Se ele falhar, o robô quebra.
-
-Se ele estiver correto, o robô evolui.
+Se ele falhar → o robô quebra
+Se ele acertar → o robô evolui
 
 ---
 
@@ -201,22 +179,12 @@ Se ele estiver correto, o robô evolui.
 
 ### v1
 
-* discovery + contratos + observabilidade básica
+observabilidade + contratos
 
 ### v2
 
-* hypothesis engine + score
+hypothesis engine
 
 ### v3
 
-* otimização + inteligência adaptativa
-
----
-
-## 🧠 Filosofia
-
-Você não está construindo um robô.
-
-Você está construindo:
-
-> **um sistema que impede o robô de morrer**
+inteligência adaptativa
