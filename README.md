@@ -2,189 +2,59 @@
 
 **Bet A.I. — 2DL Company**
 
-Repositório: `tiatendeai/ruptur-cognitive-growth-machine`
+Este microserviço é o motor de inteligência, observabilidade e sustentação do ecossistema **Bet A.I.**. Ele atua como o sistema imunológico e o cérebro de aprendizado contínuo, protegendo os robôs executores e alimentando o backend com dados validados.
 
 ---
 
-## 🚀 Visão
+## 🚀 Visão Estratégica
 
-Este projeto implementa o **Microservice Cognitive Growth Machine**, responsável por:
+O **Cognitive Growth Machine (CGM)** não executa apostas. Sua missão é garantir que o robô executor nunca opere em condições de incerteza ou falha silenciosa.
 
-* observabilidade
-* telemetria
-* anticrise
-* sustentação
-* aprendizado contínuo
-* discovery
-* contracts intelligence
-* rules intelligence
-* drift detection
-* hypothesis intelligence
+### Pilares de Atuação:
+*   **Telemetria & Observabilidade**: Monitoramento técnico e funcional em tempo real.
+*   **Anticrise & Sustentação**: Detecção proativa de mudanças (Drift) e recomendação de bloqueio.
+*   **Discovery & Engenharia Reversa**: Mapeamento contínuo de plataformas (BetBoom/Bac Bo).
+*   **Inteligência de Contratos**: Versionamento e auditoria de payloads de rede.
+*   **Aprendizado Contínuo (RAG)**: Ingestão de conhecimento e validação de hipóteses.
 
 ---
 
-## 🎯 Propósito
+## 🏗️ Arquitetura API-First
 
-Este microserviço **NÃO é o robô**.
-
-Ele existe para:
-
-* impedir que o robô quebre silenciosamente
-* detectar mudanças na plataforma (BetBoom)
-* validar contratos, UI, estados e rede
-* medir assertividade de hipóteses
-* manter rastreabilidade completa
-* alimentar backend, robô, suporte e analytics
-* permitir evolução contínua
+O projeto segue uma filosofia onde o contrato define a implementação.
+*   **Contrato Central**: `contracts/openapi.yaml`
+*   **Casos de Uso**: Localizados em diretórios específicos (ex: `will-dados-pro/`) contendo requisitos e histórias de usuário.
+*   **Rastreabilidade**: Todas as missões, tarefas e descobertas são persistidas via **Supabase**.
 
 ---
 
-## 🧠 Contexto
+## 🧩 Principais Módulos
 
-* Empresa: **2DL Company**
-* Plataforma: **Bet A.I.**
-* Caso: **will-dados-pro**
-* Domínio: **Bac Bo**
-* Plataforma alvo: **BetBoom**
-
----
-
-## 🧱 O que este serviço faz
-
-* discovery contínuo
-* engenharia reversa de UI/UX
-* análise de websocket e rede
-* versionamento de contratos
-* modelagem de state machine
-* detecção de drift
-* análise de hipóteses (sem apostar)
-* geração de métricas e alertas
-* sustentação e suporte
-* agentic RAG
+*   **`platform-discovery`**: Auditor de seletores e UI.
+*   **`network-contract-auditor`**: Auditor de payloads JSON e Websockets.
+*   **`drift-detector`**: Identificação de regressões e mudanças bruscas.
+*   **`hypothesis-intelligence`**: Motor de validação de regras (sem aposta).
+*   **`incident-intelligence`**: Gestão de alertas e runbooks de crise.
 
 ---
 
-## 🚫 O que NÃO faz
+## ⚠️ Princípios Inegociáveis
 
-* não aposta
-* não executa robô
-* não clica
-* não mistura execução com inteligência
-
----
-
-## 🔁 Execução automática
-
-### Curto prazo
-
-* health check websocket
-* validação de seletores
-* validação de estado
-
-### Médio prazo
-
-* auditoria de contratos
-* diff de UI
-* diff de payload
-
-### Longo prazo
-
-* recalcular hipóteses
-* atualizar RAG
-* detectar regressões
-
----
-
-## 🧾 Rastreabilidade
-
-Tudo é registrado:
-
-* tasks
-* missões
-* findings
-* contratos
-* snapshots
-* hipóteses
-* incidentes
-* logs
-* decisões
-* evidências
-
----
-
-## 🤖 Iniciar agente (IMPORTANTE)
-
-Use este prompt:
-
-```id="agent_start"
-Você é o agente líder do repositório tiatendeai/ruptur-cognitive-growth-machine.
-
-Responda sempre em PT-BR.
-
-Seu papel NÃO é construir o robô de apostas.
-
-Seu papel é estruturar o microserviço de:
-- observabilidade
-- telemetria
-- anticrise
-- sustentação
-- aprendizado contínuo
-
-Antes de qualquer coisa:
-1. leia o repositório
-2. verifique se existe `.env`
-3. verifique se tokens existem e não estão vazios
-4. nunca exponha segredos
-
-Depois entregue:
-- entendimento do projeto
-- análise do repo
-- arquitetura
-- bounded contexts
-- rastreabilidade
-- rotinas automáticas
-- interfaces de consumo
-- backlog
-- riscos
-- unknown unknowns
-```
-
----
-
-## 🧩 Arquitetura inicial
-
-* platform-discovery
-* ui-map-auditor
-* network-contract-auditor
-* state-machine-observer
-* hypothesis-intelligence
-* drift-detector
-* health-score-engine
-* incident-intelligence
-* knowledge-ingestor
-* consumer-api
-
----
-
-## ⚠️ Princípio central
-
-> Este sistema existe para lidar com o que muda sem aviso.
-
-Se ele falhar → o robô quebra
-Se ele acertar → o robô evolui
+1.  **Não Construir Execução de Aposta**: Este serviço é puramente de inteligência e telemetria.
+2.  **Não Acoplar ao Executor**: O CGM deve ser independente e reutilizável para outros provedores.
+3.  **Evidência Obrigatória**: Toda detecção de falha deve ser acompanhada de snapshots e logs.
+4.  **Comunicação PT-BR**: Todas as interações e planos de agentes devem ser em português brasileiro.
 
 ---
 
 ## 📈 Roadmap
 
-### v1
+*   **v1 (Fundação)**: Discovery + Contratos + Observabilidade Básica + Auth.
+*   **v2 (Inteligência)**: Hypothesis Engine + Confidence Score + RAG.
+*   **v3 (Anticrise)**: Automação de Rollback de regras + Inteligência Adaptativa.
 
-observabilidade + contratos
+---
 
-### v2
+## 🤝 Contribuição (Agentes)
 
-hypothesis engine
-
-### v3
-
-inteligência adaptativa
+Utilize o prompt de bootstrap localizado em `docs/bootstrap/agent-bootstrap.md` para iniciar novas missões.

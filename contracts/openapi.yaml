@@ -1,0 +1,82 @@
+openapi: 3.0.3
+info:
+  title: Cognitive Growth Machine API
+  description: API de inteligência, observabilidade e telemetria para o ecossistema Bet A.I.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Servidor Local de Desenvolvimento
+paths:
+  /health-score:
+    get:
+      summary: Retorna o score de integridade atual da plataforma alvo.
+      responses:
+        '200':
+          description: Score de saúde e status detalhado.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthScore'
+
+  /incidents:
+    get:
+      summary: Lista incidentes de drift ou crise detectados.
+      responses:
+        '200':
+          description: Lista de incidentes recentes.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Incident'
+    post:
+      summary: Registra um novo incidente (interno).
+      responses:
+        '201':
+          description: Incidente registrado.
+
+  /findings:
+    get:
+      summary: Consulta descobertas técnicas (seletores, contratos).
+    post:
+      summary: Registra uma nova descoberta detectada pelo plataforma-discovery.
+
+components:
+  schemas:
+    HealthScore:
+      type: object
+      properties:
+        score:
+          type: integer
+          minimum: 0
+          maximum: 100
+        status:
+          type: string
+          enum: [GREEN, YELLOW, RED, CRITICAL]
+        reasons:
+          type: array
+          items:
+            type: string
+        updatedAt:
+          type: string
+          format: date-time
+
+    Incident:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        severity:
+          type: string
+          enum: [LOW, MEDIUM, HIGH, CRITICAL]
+        title:
+          type: string
+        description:
+          type: string
+        isDrift:
+          type: boolean
+        occurredAt:
+          type: string
+          format: date-time
